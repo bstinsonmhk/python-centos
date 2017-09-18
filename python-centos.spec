@@ -7,7 +7,7 @@ Summary:	Python bindings for the CentOS account system, CBS and other services
 
 Group:		Applications/System
 License:	GPLv2
-URL:		https://centos.org/
+URL:		https://github.com/bstinsonmhk/python-centos
 Source0:	python-centos-%{version}.tar.gz
 
 BuildRequires:	python-devel, python-setuptools
