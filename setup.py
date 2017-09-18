@@ -7,6 +7,7 @@ setup(
     description="Client-side modules for CentOS Services",
     author="Brian Stinson",
     author_email="brian@bstinson.com",
+    url="https://github.com/bstinsonmhk/python-centos",
     packages=find_packages(),
     license='GPLv2',
     version='0.1.1',
