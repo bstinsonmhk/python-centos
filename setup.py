@@ -1,4 +1,4 @@
-#!/usr/bin/python -tt
+#!/usr/bin/python
 
 from setuptools import find_packages, setup
 
@@ -10,4 +10,12 @@ setup(
     packages=find_packages(),
     license='GPLv2',
     version='0.1.1',
+    install_requires=[
+        "kitchen",
+        "lockfile",
+        "munch",
+        "pyOpenSSL",
+        "requests",
+        "urllib3",
+    ],
 )
