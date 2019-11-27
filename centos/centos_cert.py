@@ -1,8 +1,15 @@
 import os
 import requests
+import sys
 
 from OpenSSL import crypto
 from centos import defaults
+
+
+# Treat Py2 long as Py3 int
+if sys.version_info[:2] >= (3, 0):
+    long = int
+
 
 class CentOSUserCert(object):
 
@@ -21,7 +28,7 @@ class CentOSUserCert(object):
             # are all pieces of data we want to reference in this class
             self.__dict__.update(dict(self._cert.get_subject().get_components()))
 
-            self.expired = self._cert.has_expired() != 0L
+            self.expired = self._cert.has_expired() != long(0)
             self.serial = self._cert.get_serial_number()
 
     @property
