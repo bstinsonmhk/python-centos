@@ -17,8 +17,10 @@ Provides python bindings for the infrastructure services in the CentOS project.}
 %global             has_dependency_generators   0
 %endif
 
-# Specifically on EPEL, enable building against another Python 3
-%{?epel:%bcond_without python3_other}
+# Specifically on EPEL7, enable building against another Python 3
+%if 0%{?epel} == 7 
+%bcond_without  python3_other
+%endif
 
 Name:       python-%{srcname}
 Version:    0.2.0
