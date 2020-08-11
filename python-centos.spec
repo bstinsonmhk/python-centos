@@ -103,7 +103,7 @@ Requires:       python%{python3_other_pkgversion}-urllib3
 %endif
 
 %prep
-%setup -q -c -n %{name}-%{version}
+%setup -q -c
 
 %build
 %{?with_python2:%py2_build}
