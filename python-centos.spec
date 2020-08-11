@@ -20,8 +20,6 @@ Provides python bindings for the infrastructure services in the CentOS project.}
 # Specifically on EPEL, enable building against another Python 3
 %{?epel:%bcond_without python3_other}
 
-%{!?python_sitelib: %global python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")}
-
 Name:       python-%{srcname}
 Version:    0.2.0
 Release:    1%{?dist}
