@@ -23,8 +23,8 @@ Provides python bindings for the infrastructure services in the CentOS project.}
 %{!?python_sitelib: %global python_sitelib %(%{__python} -c "from distutils.sysconfig import get_python_lib; print(get_python_lib())")}
 
 Name:       python-%{srcname}
-Version:    0.1.1
-Release:    3%{?dist}
+Version:    0.2.0
+Release:    1%{?dist}
 Summary:    Python bindings for the CentOS account system, CBS and other services
 
 Group:      Applications/System
@@ -145,6 +145,9 @@ rm -rf %{buildroot}
 %endif
 
 %changelog
+* Tue Aug 11 2020 bstinson@centosproject.org - 0.2.0-1
+- Make some tweaks from python3 that handle strings better
+
 * Wed Nov 27 2019 Jan Staněk <jstanek@redhat.com> - 0.1.1-3
 - Make the code compatible with Python 3
 - Modernize spec file
